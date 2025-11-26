@@ -1,14 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const manrope = Manrope({
+  weight: ["400", "500", "700"],
+  variable: "--font-manrope",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const playfair = Playfair_Display({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Regular, Medium, SemiBold, Bold
+  variable: "--font-playfair",
 });
 
 export const metadata = {
@@ -18,9 +20,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${playfair.variable}`}>
+      <body>
         {children}
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );

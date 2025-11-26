@@ -1,66 +1,60 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import TestimonialSlider from "./components/TestimonialSlider";
+import HeroSlider from "./components/HeroSlider";
 
 export default function Home() {
+  const testimonials = [
+    {
+      image: "/events/testimonialBg1.jpg",
+      mobileImage: "/events/testimonialBg2Mobile.jpg",
+      title: "— Sanya & Rohan, Udaipur Wedding",
+      text: `"They went above and beyond—not just to plan an event, but to tell our story.
+           Every moment felt personal and full of love."`,
+    },
+    {
+      image: "/events/testimonialBg2.jpg",
+      mobileImage: "/events/testimonialBg2Mobile.jpg",
+      title: "— Rhea & Aman, Mumbai",
+      text: `"Our wedding was nothing short of magical. The team understood our vision better than we did."`,
+    },
+    {
+      image: "/events/testimonialBg3.jpg",
+      mobileImage: "/events/testimonialBg2Mobile.jpg",
+      title: "— Priya & Kabir, Goa",
+      text: `"A dream wedding! Every detail was curated beautifully and handled flawlessly."`,
+    },
+  ];
+
+  const heroSlides = [
+    {
+      desktopImage: "/home/hero-desktop.jpg",
+      mobileImage: "/public/home/hero-mobile.jpg",
+      heading: "Events directed beautifully",
+      subtext: "By Aparna Gupta – Wedding director",
+      ctaText: "Discover the Difference",
+      ctaLink: "/about",
+    },
+    {
+      desktopImage: "/hero/slide2-desktop.jpg",
+      mobileImage: "/hero/slide2-mobile.jpg",
+      heading: "Events directed beautifully",
+      subtext: "By Aparna Gupta – Wedding director",
+      ctaText: "Discover the Difference",
+      ctaLink: "/about",
+    },
+  ];
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+      <HeroSlider
+        slides={[
+          "home/hero-desktop.jpg",
+          "home/hero-desktop.jpg",
+          "home/hero-desktop.jpg",
+          "home/hero-desktop.jpg",
+        ]}
+      />
+
+      <TestimonialSlider testimonials={testimonials} />
     </div>
   );
 }
