@@ -21,7 +21,12 @@ export default function HeroSlider({ slides = [] }) {
       <div className="container">
         <div className="hero-container">
           {/* Left Content */}
-          <div className="hero-text">
+          <motion.div
+            className="hero-text"
+            initial={{ opacity: 0, y: 20 }} // Initial state: invisible and slightly below
+            animate={{ opacity: 1, y: 0 }} // Final state: fully visible and in place
+            transition={{ duration: 1 }}
+          >
             <div className="d-flex justify-content-center justify-content-lg-start mb-4">
               <img src="/vector.png"></img>
             </div>
@@ -59,7 +64,7 @@ export default function HeroSlider({ slides = [] }) {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Image */}
           <motion.img
