@@ -1,11 +1,10 @@
 "use client";
-import { useEffect } from "react";
-import { usePathname } from "next/navigation"; // Using usePathname for current path
+import { usePathname } from "next/navigation"; // Use usePathname from next/navigation
 import Link from "next/link";
 import "../css/navbar.css";
 
 export default function Navbar() {
-  const pathname = usePathname();
+  const pathname = usePathname(); // Get the current path using usePathname
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -14,41 +13,6 @@ export default function Navbar() {
     { href: "/careers", label: "Careers" },
     { href: "/contact-us", label: "Contact Us" },
   ];
-
-  useEffect(() => {
-    // Function to handle the offcanvas show and hide events for scroll
-    const handleBodyScroll = (action) => {
-      if (action === "show") {
-        document.body.style.overflow = "hidden"; // Disable scrolling when offcanvas is open
-      } else if (action === "hide") {
-        document.body.style.overflow = "auto"; // Enable scrolling when offcanvas is closed
-        window.scrollTo(0, 0); // Reset scroll position if needed
-      }
-    };
-
-    // Get the offcanvas element by its ID
-    const offcanvasElement = document.getElementById("mobileMenu");
-
-    // Add event listeners for show and hide of the offcanvas
-    const showHandler = () => handleBodyScroll("show");
-    const hideHandler = () => handleBodyScroll("hide");
-
-    if (offcanvasElement) {
-      offcanvasElement.addEventListener("show.bs.offcanvas", showHandler);
-      offcanvasElement.addEventListener("hidden.bs.offcanvas", hideHandler);
-    }
-
-    // Cleanup the event listeners when the component unmounts
-    return () => {
-      if (offcanvasElement) {
-        offcanvasElement.removeEventListener("show.bs.offcanvas", showHandler);
-        offcanvasElement.removeEventListener(
-          "hidden.bs.offcanvas",
-          hideHandler
-        );
-      }
-    };
-  }, []);
 
   return (
     <div
