@@ -1,6 +1,10 @@
-import Image from "next/image";
 import TestimonialSlider from "./components/TestimonialSlider";
 import HeroSlider from "./components/HeroSlider";
+import HomePageIntro from "./components/HomePageIntro";
+import FeaturedEvents from "./components/FeaturedEvents";
+import GlobeSection from "./components/GlobeSection";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const testimonials = [
@@ -45,6 +49,7 @@ export default function Home() {
   ];
   return (
     <div>
+      <Navbar />
       <HeroSlider
         slides={[
           "home/hero-desktop.jpg",
@@ -53,8 +58,11 @@ export default function Home() {
           "home/hero-desktop.jpg",
         ]}
       />
-
+      <HomePageIntro />
+      <FeaturedEvents />
       <TestimonialSlider testimonials={testimonials} />
+      {/* <GlobeSection /> */}
+      <Footer />
     </div>
   );
 }

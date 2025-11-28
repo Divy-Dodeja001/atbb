@@ -1,6 +1,9 @@
 import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const manrope = Manrope({
   weight: ["400", "500", "700"],
@@ -21,6 +24,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${manrope.variable} ${playfair.variable}`}>
+      <head>
+        {/* Bootstrap CSS */}
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity=""
+          crossOrigin="anonymous"
+        />
+        {/* <link rel="stylesheet" href="bower_components/aos/dist/aos.css" /> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>
         {children}
         <Script

@@ -2,44 +2,44 @@
 
 .testimonial-wrapper {
   position: relative;
-  height: 460px;
-  display: flex;
-  align-items: center;
+  /* no fixed height, let image decide */
 }
 
-.desktop-bg {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
+.desktop-img-wrapper {
+  width: 100%;
 }
 
+.desktop-img {
+  width: 100%;
+  height: auto; /* keeps original aspect ratio – no crop */
+  display: block;
+}
+
+/* hide mobile image on desktop */
 .testimonial-img {
-  display: none; /* hidden on desktop */
+  display: none;
 }
 
 .testimonial-card {
   background: #385e5c;
-  color: white;
+  color: #ecdcc7;
   padding: 40px;
-  max-width: 420px;
-  margin-right: 50px;
-  border-radius: 4px;
+  max-width: 450px;
+  height: 270px;
   position: absolute;
   right: 5%;
+  bottom: 10%; /* adjust as per your visual preference */
   z-index: 2;
-  height: 250px;
+  /* let height be auto so text can grow */
 }
 
 .testi-title {
-  font-family: var(--font-playfair), serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
 .testi-text {
-  font-family: var(--font-manrope);
   font-size: 16px;
   line-height: 1.6;
 }
@@ -78,8 +78,8 @@
     height: auto;
   }
 
-  .desktop-bg {
-    display: none;
+  .desktop-img-wrapper {
+    display: none; /* hide desktop image on mobile */
   }
 
   .testimonial-img {
@@ -90,10 +90,11 @@
 
   .testimonial-card {
     width: 78%;
-    margin: -40px 60px 0;
+    margin: -200px 60px 0;
     padding: 25px;
-    border-radius: 4px;
     position: relative;
     right: 0%;
+    bottom: auto;
+    height: 300px;
   }
 }

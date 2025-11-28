@@ -10,10 +10,13 @@ import "../css/testimonialSlider.css";
 
 export default function TestimonialSlider({ testimonials = [] }) {
   return (
-    <div className="testimonial-container">
+    <div className="testimonial-container my-5 py-lg-4">
+      <h3 className="text-center mb-4 pb-1 pb-md-3 section-heading">
+        Testimonials
+      </h3>
       <Swiper
         modules={[Navigation, EffectFade, Autoplay]}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 3500, disableOnInteraction: false }}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -35,15 +38,20 @@ export default function TestimonialSlider({ testimonials = [] }) {
                 />
               </div>
 
-              {/* DESKTOP BACKGROUND IMAGE */}
-              <div
-                className="desktop-bg"
-                style={{ backgroundImage: `url(${item.image})` }}
-              />
+              {/* DESKTOP IMAGE */}
+              <div className="desktop-img-wrapper">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="desktop-img"
+                />
+              </div>
 
               {/* CARD */}
               <div className="testimonial-card">
-                <p className="testi-title">{item.title}</p>
+                <p className="testi-title font-playfair">
+                  <em>{item.title}</em>
+                </p>
                 <p className="testi-text">{item.text}</p>
 
                 {/* Navigation on card (desktop only) */}
