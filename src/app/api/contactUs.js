@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { firstName, lastName, phoneNumber, email, message } = req.body;
+    const { firstName, lastName, phoneNumber, email, message, jobTitle } = req.body;
 
     // Create a transporter using SMTP
     const transporter = nodemailer.createTransport({
@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         Name: ${firstName} ${lastName}
         Phone: ${phoneNumber}
         Email: ${email}
-
+        ${jobTitle ? `Job Title: ${jobTitle}\n` : ""}
         Message:
         ${message}
       `,

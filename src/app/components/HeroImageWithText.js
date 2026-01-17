@@ -6,7 +6,7 @@ import "../css/homeHeroSlider.css";
 const HeroImageWithText = ({ images = {} }) => {
   return (
     <div
-      className="position-relative pt-5 pt-md-0"
+      className="position-relative pt-5 pt-md-0 w-100"
       style={{ overflow: "hidden" }}
     >
       {/* Mobile Version with Motion */}
@@ -38,8 +38,8 @@ const HeroImageWithText = ({ images = {} }) => {
 
       {/* Desktop Version with Motion */}
       <div
-        className="d-md-block d-none position-absolute"
-        style={images.position}
+        className="d-md-block d-none position-absolute z-1"
+        style={images.position} 
       >
         <motion.div
           className="hero-text"
@@ -48,14 +48,14 @@ const HeroImageWithText = ({ images = {} }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="pb-lg-3 text-center text-md-start">
+          <h1 className="pb-lg-3 text-center fw-bold text-md-start text-light">
             {images.heading}
           </h1>
-          <hr style={{ width: "35%" }} className="my-0"></hr>
+          <hr style={{ width: "35%", color:"white" }} className="my-0"></hr>
         </motion.div>
 
         <motion.p
-          className="hero-sub mb-4"
+          className="hero-sub mb-4 text-light fw-bold"
           style={{ fontSize: "22px" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -68,13 +68,14 @@ const HeroImageWithText = ({ images = {} }) => {
       {/* Image with Picture Element for Responsiveness */}
       <picture>
         <source media="(max-width: 768px)" srcSet={images.mobile} />
-        <motion.img
+        <img
           src={images.desktop}
           alt="hero-fold"
           className="w-100"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }} // Fade-in delay for the image
+          style={{opacity:"0.8"}}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ delay: 0.5, duration: 1 }} // Fade-in delay for the image
         />
       </picture>
     </div>

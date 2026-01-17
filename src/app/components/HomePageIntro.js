@@ -53,17 +53,22 @@ const HomePageIntro = () => {
           </SwiperSlide>
           <SwiperSlide className="">
             <div className="">
-              <img src="/home/breakerslider3.jpg" className="w-100" />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="">
-            <div className="">
-              <img src="/home/breakerslider1.jpg" className="w-100" />
+              <img src="/home/breakerslider2.jpg" className="w-100" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="">
             <div className="">
               <img src="/home/breakerslider3.jpg" className="w-100" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="">
+              <img src="/home/breakerslider4.jpg" className="w-100" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="">
+            <div className="">
+              <img src="/home/breakerslider5.jpg" className="w-100" />
             </div>
           </SwiperSlide>
         </Swiper>

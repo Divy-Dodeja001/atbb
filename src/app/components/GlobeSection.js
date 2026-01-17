@@ -2,87 +2,161 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "../css/globe.css";
+import { Icon } from "@iconify/react";
 
 const locations = [
   {
-    id: "florence",
-    name: "Florence, Italy",
-    x: 51.5,
-    y: 37,
-    imageUrl:
-      "https://images.unsplash.com/photo-1706286997196-d541025ac6cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxGbG9yZW5jZSUyMEl0YWx5JTIwZHVvbW98ZW58MXx8fHwxNzYzOTY4MjQ4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description: "Renaissance art and architecture capital of Tuscany",
-  },
-  {
     id: "puglia",
     name: "Puglia, Italy",
-    x: 52,
-    y: 38,
-    imageUrl:
-      "https://images.unsplash.com/photo-1661695439925-a569bdbac101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxQdWdsaWElMjBJdGFseSUyMGNvYXN0fGVufDF8fHx8MTc2Mzk2ODI0OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    x: 55.5,
+    y: 50,
     description:
-      "Beautiful coastal region with white-washed towns and stunning beaches",
+      "Coastal region famous for white towns, olive groves, and beaches",
   },
   {
-    id: "vienna",
-    name: "Vienna",
-    x: 53,
-    y: 32,
-    imageUrl:
-      "https://images.unsplash.com/photo-1713725217905-ad9364b54caa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxWaWVubmElMjBhdXN0cmlhJTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc2Mzk2ODI1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description: "Imperial city known for classical music and elegant palaces",
-  },
-  {
-    id: "budapest",
-    name: "Budapest",
+    id: "florence",
+    name: "Florence, Italy",
     x: 54,
-    y: 33,
-    imageUrl:
-      "https://images.unsplash.com/photo-1545736665-490a1c07a432?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCdWRhcGVzdCUyMHBhcmxpYW1lbnQlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjM5NjgyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description:
-      "Pearl of the Danube with thermal baths and grand architecture",
+    y: 48.5,
+    description: "Cradle of the Renaissance with iconic art and architecture",
   },
   {
     id: "istanbul",
-    name: "Istanbul",
-    x: 58,
-    y: 36,
-    imageUrl:
-      "https://images.unsplash.com/photo-1613221357276-8fe60524973d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxJc3RhbmJ1bCUyMHR1cmtleSUyMG1vc3F1ZXxlbnwxfHx8fDE3NjM5NjgyNDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description: "Historic city bridging Europe and Asia with stunning mosques",
+    name: "Istanbul, Turkey",
+    x: 57.2,
+    y: 49.8,
+    description:
+      "Historic city connecting Europe and Asia across the Bosphorus",
+  },
+  {
+    id: "thailand",
+    name: "Thailand",
+    x: 70,
+    y: 51,
+    description:
+      "Tropical country known for beaches, temples, and vibrant street life",
   },
   {
     id: "dubai",
-    name: "Dubai",
-    x: 63,
-    y: 47,
-    imageUrl:
-      "https://images.unsplash.com/photo-1706798636444-d4eb076fb63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxEdWJhaSUyMGJ1cmolMjBraGFsaWZhfGVufDF8fHx8MTc2MzkwMjIyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    name: "Dubai, UAE",
+    x: 61,
+    y: 53.3,
     description:
-      "Futuristic city with world's tallest building and luxury destinations",
+      "Futuristic desert city with luxury, skyscrapers, and innovation",
   },
   {
     id: "abudhabi",
-    name: "Abu Dhabi",
-    x: 63.5,
-    y: 48,
-    imageUrl:
-      "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBYnUlMjBEaGFiaSUyMG1vc3F1ZXxlbnwxfHx8fDE3NjM5NjgyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    name: "Abu Dhabi, UAE",
+    x: 60.4,
+    y: 53.7,
+    description: "UAE capital featuring grand mosques and cultural landmarks",
+  },
+  {
+    id: "budapest",
+    name: "Budapest, Hungary",
+    x: 56,
+    y: 47.5,
     description:
-      "Capital of UAE featuring the magnificent Sheikh Zayed Grand Mosque",
+      "Danube-side city famous for thermal baths and historic bridges",
+  },
+  {
+    id: "srilanka",
+    name: "Sri Lanka",
+    x: 64.7,
+    y: 55.6,
+    description:
+      "Island nation known for tea plantations, beaches, and wildlife",
+  },
+  {
+    id: "vienna",
+    name: "Vienna, Austria",
+    x: 55,
+    y: 47,
+    description: "Classical music capital with imperial palaces and cafes",
   },
   {
     id: "mumbai",
-    name: "Mumbai",
-    x: 67,
+    name: "Mumbai, India",
+    x: 63.6,
+    y: 53.7,
+    description: "Financial capital of India and heart of Bollywood",
+  },
+  {
+    id: "chennai",
+    name: "Chennai, India",
+    x: 64.5,
+    y: 54.3,
+    description: "Cultural hub of South India with Marina Beach and temples",
+  },
+  {
+    id: "coimbatore",
+    name: "Coimbatore, India",
+    x: 64,
+    y: 54.7,
+    description: "Industrial city near the Western Ghats, known for textiles",
+  },
+  {
+    id: "bangalore",
+    name: "Bangalore, India",
+    x: 64.1,
+    y: 54.5,
+    description: "India’s Silicon Valley with a vibrant startup ecosystem",
+  },
+  {
+    id: "hyderabad",
+    name: "Hyderabad, India",
+    x: 64.1,
+    y: 54.1,
+    description: "Historic city blending tech hubs with royal Nizam heritage",
+  },
+  {
+    id: "jaipur",
+    name: "Jaipur, India",
+    x: 63.4,
+    y: 52.3,
+    description: "The Pink City famous for forts, palaces, and royal culture",
+  },
+  {
+    id: "jodhpur",
+    name: "Jodhpur, India",
+    x: 63.2,
+    y: 52.4,
+    description: "Blue City dominated by the majestic Mehrangarh Fort",
+  },
+  {
+    id: "jammu",
+    name: "Jammu, India",
+    x: 64,
     y: 52,
-    imageUrl:
-      "https://images.unsplash.com/photo-1625731226721-b4d51ae70e20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNdW1iYWklMjBJbmRpYSUyMGdhdGV3YXl8ZW58MXx8fHwxNzYzOTY4MjUxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    description: "India's financial capital and home to Bollywood",
+    description: "Gateway to Kashmir and spiritual center with ancient temples",
+  },
+  {
+    id: "ahmedabad",
+    name: "Ahmedabad, India",
+    x: 63.4,
+    y: 52.8,
+    description:
+      "Historic textile city with rich heritage and Sabarmati Ashram",
+  },
+  {
+    id: "udaipur",
+    name: "Udaipur, India",
+    x: 63.4,
+    y: 52.6,
+    description: "City of Lakes known for romantic palaces and scenic views",
+  },
+  {
+    id: "coorg",
+    name: "Coorg, India",
+    x: 63.7,
+    y: 54.4,
+    description:
+      "Hill station famous for coffee plantations and misty landscapes",
   },
 ];
 
-export default function App() {
+
+export default function GlobeSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const currentLocation = locations[currentIndex];
@@ -116,43 +190,9 @@ export default function App() {
 
   return (
     <div
-      className="relative h-screen bg-[#FFFEFB] overflow-hidden flex flex-col lg:flex-row"
+      className="relative my-5 overflow-hidden flex flex-col lg:flex-row"
       style={{ overflowX: "hidden" }}
     >
-      {/* Decorative gradient blurs - matching Figma design */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div
-          className="absolute w-[800px] h-[800px] rounded-full blur-[120px] opacity-50"
-          style={{
-            background: "radial-gradient(circle, #E3B3BA 0%, transparent 70%)",
-            left: "-200px",
-            top: "10%",
-          }}
-        />
-        <div
-          className="absolute w-[800px] h-[800px] rounded-full blur-[120px] opacity-40"
-          style={{
-            background: "radial-gradient(circle, #E7DCC7 0%, transparent 70%)",
-            right: "-200px",
-            bottom: "10%",
-          }}
-        />
-        <div
-          className="absolute w-[300px] h-[300px] rounded-full border-2 border-[#E3B3BA]/20"
-          style={{
-            left: "15%",
-            top: "60%",
-          }}
-        />
-        <div
-          className="absolute w-[200px] h-[200px] rounded-full border border-[#E7DCC7]/30"
-          style={{
-            right: "10%",
-            top: "15%",
-          }}
-        />
-      </div>
-
       {/* Globe Section - First on mobile, Right on desktop */}
       <div className="w-full lg:w-[50%] lg:order-2 flex flex-col items-center justify-center relative p-4 pt-12 pb-4 lg:pt-4 h-[50vh] lg:h-screen">
         <div className="relative">
@@ -208,32 +248,38 @@ export default function App() {
                     top: "33.333%",
                   }}
                 >
-                  {locations.map((location, index) => (
-                    <button
-                      key={location.id}
-                      onClick={() => handlePinClick(index)}
-                      className="absolute transition-all duration-700 ease-out hover:scale-110"
-                      style={{
-                        left: `${location.x}%`,
-                        top: `${location.y}%`,
-                        transform: "translate(-50%, -50%)",
-                      }}
-                    >
-                      <div
-                        className={`relative transition-all duration-700 ease-out ${
-                          currentIndex === index
-                            ? "w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 ring-2 sm:ring-3 lg:ring-4 ring-[#E3B3BA] ring-offset-2 sm:ring-offset-3 lg:ring-offset-4 ring-offset-[#F5EFE7]"
-                            : "w-7 h-7 sm:w-10 sm:h-10 lg:w-12 lg:h-12 ring-2 ring-[#375956]"
-                        } rounded-full overflow-hidden shadow-xl`}
+                  {locations.map((location, index) => {
+                    const isActive = currentIndex === index;
+
+                    return (
+                      <button
+                        key={location.id}
+                        onClick={() => handlePinClick(index)}
+                        className={`absolute transition-all duration-700 ease-out hover:scale-110 ${
+                          !isActive ? "d-none" : ""
+                        }`}
+                        style={{
+                          left: `${location.x}%`,
+                          top: `${location.y}%`,
+                          transform: "translate(-50%, -100%)", // keeps the pin tip locked
+                          background: "transparent",
+                          border: "none",
+                          padding: 0,
+                        }}
+                        aria-label={location.name}
+                        type="button"
                       >
-                        <img
-                          src={location.imageUrl}
-                          alt={location.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </button>
-                  ))}
+                        <div
+                          className={`pin-wrap ${
+                            isActive ? "pin-active pin-pop" : "pin-idle"
+                          }`}
+                          title={location.name}
+                        >
+                          <Icon icon="fa-solid:map-pin" className="pin-icon" />
+                        </div>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -244,43 +290,22 @@ export default function App() {
       {/* Card Section - Second on mobile (overlapping), Left on desktop */}
       <div className="w-full lg:w-[50%] lg:order-1 flex flex-col items-center justify-start p-6 sm:p-6 lg:p-12 relative z-20 -mt-[8vh] lg:mt-0 lg:justify-center lg:h-screen">
         <div className="relative">
-          <button
-            onClick={handlePrevious}
-            style={{ borderRadius: "25px" }}
-            className="absolute -left-6 sm:-left-8 lg:-left-20 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-[#375956] hover:bg-[#2F4A46] shadow-lg flex items-center justify-center transition-all hover:scale-110 z-10"
-          >
-            <ChevronLeft className="size-4 sm:size-5 lg:size-6 text-white" />
-          </button>
-
-          <button
-            onClick={handleNext}
-            style={{ borderRadius: "25px" }}
-            className="absolute -right-6 sm:-right-8 lg:-right-20 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-[#375956] hover:bg-[#2F4A46] shadow-lg flex items-center justify-center transition-all hover:scale-110 z-10"
-          >
-            <ChevronRight className="size-4 sm:size-5 lg:size-6 text-white" />
-          </button>
-
-          <div
-            key={currentLocation.id}
-            className="relative p-3 p-lg-5 shadow-2xl overflow-hidden border-2 border-[#E7DCC7]/40"
-            style={{
-              boxShadow: "0 20px 60px rgba(227, 179, 186, 0.3)",
-            }}
-          >
-            <div className="" />
-
-            <div className="p-3 sm:p-5 lg:p-8">
-              <h2 className=" transition-all duration-700 ease-out font-['Playfair_Display',serif] mb-0.5 sm:mb-2 text-base sm:text-xl lg:text-2xl">
-                {currentLocation.name}
-              </h2>
-              <p className=" text-[10px] sm:text-sm lg:text-base line-clamp-2">
-                {currentLocation.description}
-              </p>
+          <div className="globe-card" key={currentLocation.id}>
+            <p className="testi-title font-playfair">
+              <em>{currentLocation.name}</em>
+            </p>
+            <p className="testi-text">{currentLocation.description}</p>
+            <div className="card-nav">
+              <div
+                className="swiper-button-prev"
+                onClick={handlePrevious}
+              ></div>
+              <div className="swiper-button-next" onClick={handleNext}></div>
             </div>
           </div>
         </div>
 
-        <div className="flex gap-1.5 sm:gap-2 mt-4 sm:mt-6 lg:mt-8 flex-wrap justify-center max-w-md">
+        {/* <div className="flex gap-1.5 sm:gap-2 mt-4 sm:mt-6 lg:mt-8 flex-wrap justify-center max-w-md">
           {locations.map((_, index) => (
             <button
               key={index}
@@ -292,7 +317,7 @@ export default function App() {
               }`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

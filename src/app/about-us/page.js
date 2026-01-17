@@ -16,7 +16,7 @@ const page = () => {
           mobile: "/about-us/aboutusHeroMobile.jpg",
           heading: "Behind every iconic event",
           subtext: "A visionary director",
-          position: { top: "40%", right: "-8%" },
+          position: { top: "30%", left: "5%" },
           width: { width: "85%" },
         }}
       />

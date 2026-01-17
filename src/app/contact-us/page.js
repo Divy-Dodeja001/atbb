@@ -47,8 +47,7 @@ const Page = () => {
         alert("There was an error. Please try again.");
       }
     } catch (error) {
-      console.error(error);
-      alert("There was an error. Please try again.");
+      alert(`${error.message}. Please try again.`);
     }
   };
 

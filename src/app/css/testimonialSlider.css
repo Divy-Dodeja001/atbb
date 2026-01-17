@@ -33,8 +33,22 @@
   /* let height be auto so text can grow */
 }
 
+.globe-card {
+  background: #385e5c;
+  color: #ecdcc7;
+  padding: 40px;
+  height: 270px;
+  width: 500px;
+}
+
 .testi-title {
   font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.event-title {
+  font-size: 22px;
   font-weight: 500;
   margin-bottom: 15px;
 }
@@ -96,5 +110,12 @@
     right: 0%;
     bottom: auto;
     height: 300px;
+  }
+  .globe-card {
+    background: #385e5c;
+    color: #ecdcc7;
+    padding: 25px;
+    height: 200px;
+    width: 330px;
   }
 }

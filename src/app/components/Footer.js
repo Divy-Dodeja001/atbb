@@ -1,6 +1,7 @@
 import React from "react";
 import CtaButton from "./CtaButton";
 import Link from "next/link";
+import ContactFormModal from "./ContactFormModal";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="col-lg-4 d-flex justify-content-lg-end align-items-center align-items-lg-start mb-lg-0">
-          <CtaButton cta={"Get in Touch"} link="/contact-us" />
+          <ContactFormModal btnClass={"cta-btn text-decoration-none"} buttonText={"Get in Touch"} />
         </div>
       </div>
       <hr></hr>

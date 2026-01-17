@@ -2147,3 +2147,65 @@ html {
   inherits: false;
   initial-value: 1;
 }
+
+
+.pin-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: bottom center; /* grow from the tip */
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.pin-icon {
+  width: 26px;
+  height: 46px;
+  color: #f88ea9; /* your red */
+  /* filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22)); */
+}
+
+.pin-idle {
+  transform: scale(0.5);
+  filter: none;
+}
+
+.pin-active {
+  transform: scale(1.35);
+  /* filter: drop-shadow(0 10px 18px rgba(168, 0, 0, 0.35)); */
+}
+
+/* Active pop animation */
+.pin-pop {
+  animation: pinPop 2s infinite ease-in-out;
+}
+
+/* Pulse / bounce */
+@keyframes pinPop {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsive sizing (optional) */
+@media (min-width: 640px) {
+  .pin-icon {
+    width: 30px;
+    height: 52px;
+  }
+}
+@media (min-width: 1024px) {
+  .pin-icon {
+    width: 34px;
+    height: 60px;
+  }
+}

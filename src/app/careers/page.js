@@ -3,6 +3,7 @@ import HeroImage from "../components/HeroImage";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CtaButton from "../components/CtaButton";
+import ContactFormModal from "../components/ContactFormModal";
 
 const page = () => {
   const careers = [
@@ -59,12 +60,13 @@ const page = () => {
                     </p>
                   </div>
                   <div className="col-12 col-md-3 d-flex justify-content-center align-items-center flex-column">
-                    <button
-                      type="submit"
-                      className="cta-btn text-decoration-none col-12 col-md-auto"
-                    >
-                      Apply Now
-                    </button>
+                    <ContactFormModal
+                      buttonText={"Apply Now"}
+                      btnClass={
+                        "cta-btn text-decoration-none col-12 col-md-auto"
+                      }
+                      jobTitle={career.desg}
+                    />
                   </div>
                 </div>
               </div>

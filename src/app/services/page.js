@@ -16,7 +16,7 @@ const page = () => {
           mobile: "/services/serviceHeroMobile.jpg",
           heading: "Artful direction, Seamless Execution",
           subtext: "Crafted Services",
-          position: { top: "35%", right: "-30%" },
+          position: { top: "30%", left:"5%" },
           width: { width: "70%" },
         }}
       />

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import "../css/homeHeroSlider.css";
 import CtaButton from "./CtaButton";
 
@@ -67,14 +67,20 @@ export default function HeroSlider({ slides = [] }) {
           </motion.div>
 
           {/* Image */}
-          <motion.img
-            key={index}
-            src={slides[index]}
-            className="hero-image"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-          />
+          <div className="hero-image-wrap">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={index}
+                src={slides[index]}
+                className="hero-image"
+                initial={{ opacity: 0, scale: 1.02 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                alt="Hero"
+              />
+            </AnimatePresence>
+          </div>
 
           <div className="pagination d-md-none mt-4">
             <div className="page-num">{String(index + 1).padStart(2, "0")}</div>

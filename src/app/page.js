@@ -10,7 +10,7 @@ export default function Home() {
   const testimonials = [
     {
       image: "/events/testimonialBg1.jpg",
-      mobileImage: "/events/testimonialBg2Mobile.jpg",
+      mobileImage: "/events/testimonialBg1Mobile.jpg",
       title: "— Sanya & Rohan, Udaipur Wedding",
       text: `"They went above and beyond—not just to plan an event, but to tell our story.
            Every moment felt personal and full of love."`,
@@ -23,7 +23,7 @@ export default function Home() {
     },
     {
       image: "/events/testimonialBg3.jpg",
-      mobileImage: "/events/testimonialBg2Mobile.jpg",
+      mobileImage: "/events/testimonialBg3Mobile.jpg",
       title: "— Priya & Kabir, Goa",
       text: `"A dream wedding! Every detail was curated beautifully and handled flawlessly."`,
     },
@@ -52,16 +52,15 @@ export default function Home() {
       <Navbar />
       <HeroSlider
         slides={[
-          "home/hero-desktop.jpg",
-          "home/hero-desktop.jpg",
-          "home/hero-desktop.jpg",
-          "home/hero-desktop.jpg",
+          "home/hero-desktop1.jpg",
+          "home/hero-desktop2.jpg",
+          "home/hero-desktop3.jpg",
         ]}
       />
       <HomePageIntro />
-      <FeaturedEvents />
+      {/* <FeaturedEvents /> */}
       <TestimonialSlider testimonials={testimonials} />
-      {/* <GlobeSection /> */}
+      <GlobeSection />
       <Footer />
     </div>
   );

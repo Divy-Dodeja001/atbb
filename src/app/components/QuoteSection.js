@@ -10,7 +10,7 @@ const QuoteSection = ({ founder, quote }) => {
             className="d-flex justify-content-center align-items-center"
             style={{ gap: "1em" }}
           >
-            <img src="/about-us/aparnaProfile.png"></img>
+            <img src="/about-us/aparnaProfile.jpg"></img>
             <p className="text-light mb-0">APARNA GUPTA</p>
           </div>
         </div>
