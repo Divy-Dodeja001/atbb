@@ -16,20 +16,20 @@ const page = () => {
           mobile: "/services/serviceHeroMobile.jpg",
           heading: "Artful direction, Seamless Execution",
           subtext: "Crafted Services",
-          position: { top: "30%", left:"5%" },
+          position: { top: "30%", left: "5%" },
           width: { width: "70%" },
         }}
       />
       <ServicesSlider />
       <IconsSlider
         icons={[
+          { image: "/services/enquiry.png", text: "Event Inquiry" },
+          { image: "/services/session.png", text: "Vision Session" },
+          { image: "/services/design.png", text: "Design & Planning" },
           {
             image: "/services/coordination.png",
             text: "Execution & Co-ordination",
           },
-          { image: "/services/enquiry.png", text: "Event Inquiry" },
-          { image: "/services/design.png", text: "Design & Planning" },
-          { image: "/services/session.png", text: "Vision Session" },
         ]}
         heading={"Our Process"}
         mobileView={2}

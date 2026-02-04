@@ -27,7 +27,7 @@ export default function HeroSlider({ slides = [] }) {
             animate={{ opacity: 1, y: 0 }} // Final state: fully visible and in place
             transition={{ duration: 1 }}
           >
-            <div className="d-flex justify-content-center justify-content-lg-start mb-4">
+            <div className="d-flex justify-content-center justify-content-lg-start mb-3">
               <img src="/vector.png"></img>
             </div>
             <h1 className="mb-4 pb-lg-3">
@@ -35,7 +35,7 @@ export default function HeroSlider({ slides = [] }) {
               <br /> beautifully
             </h1>
 
-            <p className="hero-sub mb-lg-4">
+            <p className="hero-sub mb-4">
               By Aparna Gupta – Wedding director
             </p>
 

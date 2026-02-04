@@ -7,17 +7,19 @@ const Footer = () => {
   return (
     <div className="glass-header">
       <div className="d-flex justify-content-start container align-items-lg-end py-4 mb-3 flex-column flex-lg-row align-items-center align-items-lg-start">
-        <div className="d-flex align-items-lg-end justify-content-start align-items-center align-items-lg-start justify-content-lg-between col-lg-8 flex-lg-row flex-column">
+        <div className="d-flex align-items-lg-end justify-content-start align-items-center align-items-lg-start justify-content-lg-between col-lg-2 flex-lg-row flex-column">
           <div className="mb-4 mb-lg-0">
             <img src="/logo.png"></img>
           </div>
+        </div>
+        <div className="col-lg-8">
           <div className="mb-4 mb-lg-0">
-            <h5 className="font-playfair w-lg-75 text-center text-lg-start">
+            <h5 className="font-playfair text-center">
               Dreaming of an unforgettable event? Were just a message away
             </h5>
           </div>
         </div>
-        <div className="col-lg-4 d-flex justify-content-lg-end align-items-center align-items-lg-start mb-lg-0">
+        <div className="col-lg-2 d-flex justify-content-lg-end align-items-center align-items-lg-start mb-lg-0">
           <ContactFormModal btnClass={"cta-btn text-decoration-none"} buttonText={"Get in Touch"} />
         </div>
       </div>
@@ -87,7 +89,7 @@ const Footer = () => {
           <a
             className="text-decoration-none font-playfair fw-medium text-uppercase"
             style={{ color: "inherit" }}
-            href=""
+            href=" https://www.instagram.com/atbbevents/"
             target="_blank"
           >
             Instagram
@@ -95,7 +97,7 @@ const Footer = () => {
           <a
             className="text-decoration-none font-playfair fw-medium text-uppercase"
             style={{ color: "inherit" }}
-            href=""
+            href="https://www.linkedin.com/in/aparna-gupta-30048a358/"
             target="_blank"
           >
             LinkedIn

@@ -35,7 +35,7 @@ const page = () => {
       />
       <QuoteSection
         quote={
-          "Crafting Celebrations with Grace and Precision, forever and ever"
+          "Crafting Celebrations with Grace and Precision, forever and ever."
         }
         founder={true}
       />

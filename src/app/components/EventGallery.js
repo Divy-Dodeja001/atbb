@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from "react";
@@ -10,57 +9,90 @@ const EventGallery = ({ eventId }) => {
       eventId: "bridal_shower",
       eventName: "Bridal Shower",
       gallery: [
-        "/events/bridal_shower/1.jpg",
-        "/events/bridal_shower/2.jpg",
-        "/events/bridal_shower/3.jpg",
-        "/events/bridal_shower/4.jpg",
-        "/events/bridal_shower/5.jpg",
-        "/events/bridal_shower/6.jpg",
-        "/events/bridal_shower/7.jpg",
-        "/events/bridal_shower/8.jpg",
+        "/events/bridal_shower/1.webp",
+        "/events/bridal_shower/2.webp",
+        "/events/bridal_shower/3.webp",
+        "/events/bridal_shower/4.webp",
+        "/events/bridal_shower/5.webp",
+        "/events/bridal_shower/6.webp",
+        "/events/bridal_shower/7.webp",
       ],
     },
     {
       eventId: "cocktail_evening",
       eventName: "Cocktail Evening",
       gallery: [
-        "/events/cocktail_evening/1.jpg",
-        "/events/cocktail_evening/2.jpg",
-        "/events/cocktail_evening/3.jpg",
-        "/events/cocktail_evening/4.jpg",
-      ],
-    },
-    {
-      eventId: "baby_shower",
-      eventName: "Baby Shower",
-      gallery: [
-        "/events/baby_shower/1.jpg",
-        "/events/baby_shower/2.jpg",
-        "/events/baby_shower/3.jpg",
+        "/events/cocktail_evening/1.webp",
+        "/events/cocktail_evening/2.webp",
+        "/events/cocktail_evening/3.webp",
       ],
     },
     {
       eventId: "haldi",
       eventName: "Haldi Ceremony",
       gallery: [
-        "/events/haldi/1.jpg",
-        // "/events/haldi/2.jpg",
-        // "/events/haldi/3.jpg",
-        "/events/haldi/4.jpg",
-        "/events/haldi/5.jpg",
-        "/events/haldi/6.jpg",
+        "/events/haldi/1.webp",
+        "/events/haldi/2.webp",
+        "/events/haldi/3.webp",
+        "/events/haldi/4.webp",
       ],
     },
-    // {
-    //   eventId: "formal_dinner",
-    //   eventName: "Formal Dinner",
-    //   gallery: [
-    //     "/events/formal_dinner/1.jpg",
-    //     "/events/formal_dinner/2.jpg",
-    //     "/events/formal_dinner/3.jpg",
-    //     "/events/formal_dinner/4.jpg",
-    //   ],
-    // },
+    {
+      eventId: "formal_dinner",
+      eventName: "Formal Dinner",
+      gallery: [
+        "/events/formal_dinner/1.webp",
+        "/events/formal_dinner/2.webp",
+        "/events/formal_dinner/3.webp",
+      ],
+    },
+    {
+      eventId: "home_puja",
+      eventName: "Home Puja",
+      gallery: [
+        "/events/home_puja/1.webp",
+        "/events/home_puja/2.webp",
+        "/events/home_puja/3.webp",
+        "/events/home_puja/4.webp",
+        "/events/home_puja/5.webp",
+        "/events/home_puja/6.webp",
+        "/events/home_puja/7.webp",
+      ],
+    },
+    {
+      eventId: "masked_untamed",
+      eventName: "Masked & Untamed",
+      gallery: [
+        "/events/masked_untamed/1.webp",
+        "/events/masked_untamed/2.webp",
+        "/events/masked_untamed/3.webp",
+      ],
+    },
+    {
+      eventId: "mehendi_sangeet",
+      eventName: "Mehendi & Sangeet",
+      gallery: [
+        "/events/mehendi_sangeet/1.webp",
+        "/events/mehendi_sangeet/2.webp",
+        "/events/mehendi_sangeet/3.webp",
+        "/events/mehendi_sangeet/4.webp",
+        "/events/mehendi_sangeet/5.webp",
+        "/events/mehendi_sangeet/6.webp",
+        "/events/mehendi_sangeet/7.webp",
+        "/events/mehendi_sangeet/8.webp",
+        "/events/mehendi_sangeet/9.webp",
+      ],
+    },
+    {
+      eventId: "reception",
+      eventName: "Reception",
+      gallery: ["/events/reception/1.webp", "/events/reception/2.webp"],
+    },
+    {
+      eventId: "wedding",
+      eventName: "Wedding",
+      gallery: ["/events/wedding/1.webp", "/events/wedding/2.webp"],
+    },
   ];
   const activeEvent = eventGallery.find((e) => e.eventId === eventId);
   return (

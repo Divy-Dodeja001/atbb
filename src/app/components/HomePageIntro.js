@@ -11,17 +11,19 @@ const HomePageIntro = () => {
         <div className="d-flex justify-content-center mb-4">
           <img src="/vector.png"></img>
         </div>
-        <p
-          className="text-center mb-0 home-page-intro-text px-2"
-          style={{ fontSize: "20px" }}
-        >
-          Aparna Gupta transforms celebrations into unforgettable experiences
-          through thoughtful orchestration, precise direction, and elegant
-          aesthetics. Each event is a bespoke celebration—crafted with curated
-          décor, meticulous attention to detail, and tailored experiences that
-          reflect your vision, preferences, and budget. With ATBB, every moment
-          feels personal, seamless, and effortlessly beautiful
-        </p>
+        <div className="d-flex justify-content-center w-100">
+          <p
+            className="text-center mb-0 home-page-intro-text px-2 col-md-9"
+            style={{ fontSize: "20px", lineHeight:"2em" }}
+          >
+            Aparna Gupta transforms celebrations into unforgettable experiences
+            through thoughtful orchestration, precise direction, and elegant
+            aesthetics. Each event is a bespoke celebration—crafted with curated
+            décor, meticulous attention to detail, and tailored experiences that
+            reflect your vision, preferences, and budget. With ATBB, every
+            moment feels personal, seamless, and effortlessly beautiful
+          </p>
+        </div>
         <div className="my-5 d-flex justify-content-center">
           <CtaButton cta={"Meet Aparna"} link="/about-us" />
         </div>
@@ -48,27 +50,27 @@ const HomePageIntro = () => {
         >
           <SwiperSlide className="">
             <div className="">
-              <img src="/home/breakerslider1.jpg" className="w-100" />
+              <img src="/home/breakerslider1.jpg" className="w-100 rounded-3" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="">
             <div className="">
-              <img src="/home/breakerslider2.jpg" className="w-100" />
+              <img src="/home/breakerslider2.jpg" className="w-100 rounded-3" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="">
             <div className="">
-              <img src="/home/breakerslider3.jpg" className="w-100" />
+              <img src="/home/breakerslider3.jpg" className="w-100 rounded-3" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="">
             <div className="">
-              <img src="/home/breakerslider4.jpg" className="w-100" />
+              <img src="/home/breakerslider4.jpg" className="w-100 rounded-3" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="">
             <div className="">
-              <img src="/home/breakerslider5.jpg" className="w-100" />
+              <img src="/home/breakerslider5.jpg" className="w-100 rounded-3" />
             </div>
           </SwiperSlide>
         </Swiper>

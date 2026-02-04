@@ -54,7 +54,7 @@ body {
 
 .section-heading {
   font-family: var(--font-playfair), serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 600;
 }
 
@@ -170,12 +170,12 @@ p {
 
 @media (max-width: 768px) {
   .section-heading {
-    font-size: 26px;
+    font-size: 35px;
   }
   .quote-section {
     padding: 50px 40px;
     h3 {
-      font-size: 35px;
+      font-size: 26px;
       color: white;
     }
   }

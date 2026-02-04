@@ -9,8 +9,8 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
-    { href: "/events", label: "Events" },
-    { href: "/services", label: "Services" },
+    { href: "/services", label: "Our Services" },
+    { href: "/events", label: "Portfolio" },
     { href: "/careers", label: "Careers" },
     { href: "/contact-us", label: "Contact Us" },
   ];
@@ -27,7 +27,7 @@ export default function Navbar() {
             href="/"
             className="navbar-brand py-2 d-flex justify-content-md-center mb-md-3"
           >
-            <img src={"/logo.png"} width={90} alt="Logo" priority />
+            <img src={"/logo.png"} width={100} alt="Logo" priority />
           </Link>
 
           {/* Hamburger for mobile */}

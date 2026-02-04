@@ -38,8 +38,8 @@ const ServicesSlider = () => {
         <img src="/butterfly3.png" className="butterfly-2"></img>
       </div>
       <div className="container">
-        <h3 className="mb-4 pb-2 pb-md-3 section-heading">Services Overview</h3>
-        <div className="services-pink-strip"></div>
+        <h3 className="mb-5 pb-2 pb-md-3 section-heading">Services Overview</h3>
+        <div className="mt-3 services-pink-strip rounded-3"></div>
         <div>
           <Swiper
             modules={[Autoplay, Pagination]}
@@ -64,7 +64,7 @@ const ServicesSlider = () => {
                 <SwiperSlide className="" key={index}>
                   <div className="mb-4 pb-4">
                     <div className="mb-3">
-                      <img src={service.image} className="w-100" />
+                      <img src={service.image} className="w-100 rounded-3" />
                     </div>
                     <div>
                       <h5 className="fw-bold primary-color">{service.name}</h5>

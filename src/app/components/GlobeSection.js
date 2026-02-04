@@ -155,7 +155,6 @@ const locations = [
   },
 ];
 
-
 export default function GlobeSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -238,7 +237,7 @@ export default function GlobeSection() {
                         }}
                       />
                     </div>
-                  ))
+                  )),
                 )}
 
                 <div
@@ -296,11 +295,18 @@ export default function GlobeSection() {
             </p>
             <p className="testi-text">{currentLocation.description}</p>
             <div className="card-nav">
-              <div
-                className="swiper-button-prev"
-                onClick={handlePrevious}
-              ></div>
-              <div className="swiper-button-next" onClick={handleNext}></div>
+              <div className="swiper-button-prev" onClick={handlePrevious}>
+                <Icon
+                  icon="iconamoon:arrow-left-2-light"
+                  style={{ width: "44px" }}
+                />
+              </div>
+              <div className="swiper-button-next" onClick={handleNext}>
+                <Icon
+                  icon="iconamoon:arrow-right-2-light"
+                  style={{ width: "44px" }}
+                />
+              </div>
             </div>
           </div>
         </div>

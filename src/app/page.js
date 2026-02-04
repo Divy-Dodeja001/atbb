@@ -52,9 +52,9 @@ export default function Home() {
       <Navbar />
       <HeroSlider
         slides={[
-          "home/hero-desktop1.jpg",
-          "home/hero-desktop2.jpg",
-          "home/hero-desktop3.jpg",
+          "home/hero-desktop1.webp",
+          "home/hero-desktop2.webp",
+          "home/hero-desktop3.webp",
         ]}
       />
       <HomePageIntro />
