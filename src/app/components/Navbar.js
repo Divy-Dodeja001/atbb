@@ -21,13 +21,26 @@ export default function Navbar() {
       style={{ zIndex: "100", top: "0%" }}
     >
       <div className="navbar navbar-expand-lg glass-header">
-        <div className="px-lg-5 px-3 d-flex justify-content-between justify-content-lg-center flex-lg-column w-100">
+        <div className="px-lg-5 px-3 d-flex justify-content-between align-items-end align-items-lg-center justify-content-lg-center flex-lg-column w-100">
           {/* Logo */}
           <Link
             href="/"
-            className="navbar-brand py-2 d-flex justify-content-md-center mb-md-3"
+            className="navbar-brand py-2 d-flex justify-content-md-center mb-md-4"
           >
-            <img src={"/logo.png"} width={100} alt="Logo" priority />
+            <img
+              src={"/logo.png"}
+              width={146}
+              alt="Logo"
+              className="d-md-block d-none"
+              priority
+            />
+            <img
+              src={"/logo.png"}
+              width={100}
+              alt="Logo"
+              className="d-md-none"
+              priority
+            />
           </Link>
 
           {/* Hamburger for mobile */}
@@ -43,7 +56,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="collapse navbar-collapse d-none d-lg-flex justify-content-end justify-content-md-center mb-md-2">
-            <ul className="navbar-nav gap-4">
+            <ul className="navbar-nav gap-5">
               {navLinks.map(({ href, label }) => (
                 <li className="nav-item font-playfair fw-semibold" key={label}>
                   <Link
@@ -51,7 +64,7 @@ export default function Navbar() {
                     className={`nav-link text-uppercase font-playfair fw-regular ${
                       pathname === href ? "active-link" : ""
                     }`} // Conditionally add active class
-                    style={{ fontSize: "14px", letterSpacing: "1px" }}
+                    style={{ fontSize: "16px", letterSpacing: "1px" }}
                   >
                     {label}
                   </Link>

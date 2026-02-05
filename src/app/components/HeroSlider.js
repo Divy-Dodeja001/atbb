@@ -30,12 +30,12 @@ export default function HeroSlider({ slides = [] }) {
             <div className="d-flex justify-content-center justify-content-lg-start mb-3">
               <img src="/vector.png"></img>
             </div>
-            <h1 className="mb-4 pb-lg-3">
+            <h1 className="mb-3" style={{lineHeight:"1.5em"}}>
               Events directed
-              <br /> beautifully
+              <br className="d-md-block d-none" /> beautifully
             </h1>
-
-            <p className="hero-sub mb-4">
+            <hr className="px-5 col-6 col-md-4 mx-auto mx-md-0"></hr>
+            <p className="hero-sub mb-5">
               By Aparna Gupta – Wedding director
             </p>
 
@@ -82,7 +82,7 @@ export default function HeroSlider({ slides = [] }) {
             </AnimatePresence>
           </div>
 
-          <div className="pagination d-md-none mt-4">
+          {/* <div className="pagination d-md-none mt-4">
             <div className="page-num">{String(index + 1).padStart(2, "0")}</div>
 
             <div className="progress-bar">
@@ -98,7 +98,7 @@ export default function HeroSlider({ slides = [] }) {
             <div className="page-num">
               {String(slides.length).padStart(2, "0")}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

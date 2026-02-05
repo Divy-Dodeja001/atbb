@@ -58,7 +58,7 @@ export default function Home() {
         ]}
       />
       <HomePageIntro />
-      {/* <FeaturedEvents /> */}
+      <FeaturedEvents />
       <TestimonialSlider testimonials={testimonials} />
       <GlobeSection />
       <Footer />

@@ -2,7 +2,7 @@ import React from "react";
 
 const QuoteSection = ({ founder, quote }) => {
   return (
-    <div className="quote-section primary-bg-color position-relative d-flex justify-content-center">
+    <div className="quote-section primary-bg-color position-relative d-flex justify-content-center flex-column align-items-center">
       <h3 className="font-playfair-italic text-center pb-2 col-md-10" style={{lineHeight:"1.8em"}}>{quote}</h3>
       {founder && (
         <div className="mt-4">
