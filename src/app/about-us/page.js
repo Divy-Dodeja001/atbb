@@ -14,14 +14,14 @@ const page = () => {
         images={{
           desktop: "/about-us/aboutusHeroDesktop.jpg",
           mobile: "/about-us/aboutusHeroMobile.jpg",
-          heading: "Behind every iconic event",
+          heading: "Bespoke Events Across Continents",
           subtext: "A visionary director",
           position: { top: "30%", left: "5%" },
           width: { width: "85%" },
         }}
       />
       <FounderNote />
-      <IconsSlider
+      {/* <IconsSlider
         icons={[
           { image: "/about-us/creativity.png", text: "Creativity" },
           { image: "/about-us/emphathy.png", text: "Empathy" },
@@ -32,10 +32,10 @@ const page = () => {
         ]}
         heading={"Our core values"}
         mobileView={2.3}
-      />
+      /> */}
       <QuoteSection
         quote={
-          "Crafting Celebrations with Grace and Precision, forever and ever."
+          "Backed by decades of experience, each celebration is guided by vision, artistry and precision. Turning moments into lasting memories."
         }
         founder={true}
       />

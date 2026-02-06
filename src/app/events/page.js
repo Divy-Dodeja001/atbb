@@ -177,8 +177,8 @@ export default function Page() {
 
                       {/* White box div */}
                       <div className="white-box position-absolute w-75">
-                        <h3 className="font-playfair mb-3" style={{fontSize:"23px"}}><em>"{event.eventName}"</em></h3>
-                        <p>{event.description}</p>
+                        <h3 className="font-playfair mb-3" style={{fontSize:"20px"}}><em>"{event.eventName}"</em></h3>
+                        <p style={{fontSize:"15px"}}>{event.description}</p>
                       </div>
                     </motion.div>
                   </div>

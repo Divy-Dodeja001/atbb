@@ -31,8 +31,8 @@ export default function HeroSlider({ slides = [] }) {
               <img src="/vector.png"></img>
             </div>
             <h1 className="mb-3" style={{lineHeight:"1.5em"}}>
-              Events directed
-              <br className="d-md-block d-none" /> beautifully
+              Bespoke Events,
+              <br className="d-md-block d-none" /> Beautifully Curated
             </h1>
             <hr className="px-5 col-6 col-md-4 mx-auto mx-md-0"></hr>
             <p className="hero-sub mb-5">

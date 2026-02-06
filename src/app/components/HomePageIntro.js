@@ -14,14 +14,13 @@ const HomePageIntro = () => {
         <div className="d-flex justify-content-center w-100">
           <p
             className="text-center mb-0 home-page-intro-text px-2 col-md-9"
-            style={{ fontSize: "20px", lineHeight:"2em" }}
+            style={{ fontSize: "20px", lineHeight: "2em" }}
           >
-            Aparna Gupta transforms celebrations into unforgettable experiences
-            through thoughtful orchestration, precise direction, and elegant
-            aesthetics. Each event is a bespoke celebration—crafted with curated
-            décor, meticulous attention to detail, and tailored experiences that
-            reflect your vision, preferences, and budget. With ATBB, every
-            moment feels personal, seamless, and effortlessly beautiful
+            Aparna Gupta, Creative Director at All Things Bright & Beautiful,
+            brings over 23 years of experience in event and wedding planning.
+            ATBB creates bespoke celebrations of all scales, from intimate
+            gatherings to grand weddings. With ATBB, every moment feels
+            personal, seamless, and effortlessly beautiful.
           </p>
         </div>
         <div className="my-5 d-flex justify-content-center">

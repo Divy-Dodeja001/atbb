@@ -36,7 +36,7 @@ const page = () => {
       />
       <QuoteSection
         quote={
-          "Your story deserves an artful beginning — let’s craft it together."
+          "Your story deserves an artful beginning, let’s craft it together."
         }
       />
       <Footer />

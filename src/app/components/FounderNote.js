@@ -10,9 +10,8 @@ const FounderNote = () => {
       <div className="container hero-container align-items-start text-start">
         {/* Left Content */}
         <div className="hero-text">
-          <h1 className="mb-4 pb-3 mb-lg-4 pb-lg-3 founder-note-heading">
-            &quot;Aparna Gupta: Crafting Celebrations with Grace and
-            Precision&quot;
+          <h1 className="mb-4 pb-3 mb-lg-4 pb-lg-3 founder-note-heading" style={{lineHeight:"1.5em"}}>
+            Our Creative Director <br></br>Aparna Gupta
           </h1>
           <div className="d-md-block d-none founder-note-text">
             <p className="mb-lg-4">
@@ -25,7 +24,7 @@ const FounderNote = () => {
               began as an event management agency has evolved into a brand.
             </p>
             <div className="my-lg-5 my-4">
-              <CtaButton cta={"Connect with Aparna"} />
+              <CtaButton link="https://www.linkedin.com/in/aparna-gupta-30048a358/" cta={"Connect with Aparna"} />
             </div>
           </div>
         </div>
@@ -37,7 +36,7 @@ const FounderNote = () => {
         </picture>
 
         <div className="d-lg-none">
-          <p className="my-4 pb-2">
+          <p className="my-4 pb-2 text-center">
             Aparna Gupta turns every celebration into a memorable experience
             through thoughtful planning, elegant aesthetics, and flawless
             execution. With over 23 years of experience curating events across
@@ -46,8 +45,8 @@ const FounderNote = () => {
             feel personal, refined, and effortlessly unforgettable. What began
             as an event management agency has evolved into a brand.
           </p>
-          <div className="my-lg-5 my-4">
-            <CtaButton cta={"Connect with Aparna"} />
+          <div className="my-lg-5 my-4 d-flex justify-content-center justify-content-md-start">
+            <CtaButton link="https://www.linkedin.com/in/aparna-gupta-30048a358/" cta={"Connect with Aparna"} />
           </div>
         </div>
       </div>

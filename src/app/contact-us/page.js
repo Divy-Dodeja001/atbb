@@ -61,15 +61,15 @@ const Page = () => {
         }}
       />
       <div className="d-flex justify-content-between container p-0 w-100 flex-column flex-md-row my-5 py-lg-5">
-        <div className="col-12 col-md-6 p-3">
-          <h1 className="font-playfair fw-medium col-md-10 mb-4">
+        <div className="col-12 p-3 d-flex justify-content-center flex-column align-items-center">
+          <h1 className="font-playfair fw-medium mb-4 text-center">
             Let’s create something beautiful together
           </h1>
-          <p className="col-md-10">
+          <p className="text-center mb-4">
             Share your vision with us, we’ll bring it to life with creativity,
             care, and timeless detail
           </p>
-          <div className="col-md-10">
+          <div className="col-md-6">
             <form onSubmit={handleSubmit}>
               <div className="d-flex mb-2" style={{ gap: "0.7em" }}>
                 <input
@@ -121,15 +121,15 @@ const Page = () => {
                   required
                 ></textarea>
               </div>
-              <div className="my-4 pt-2">
-                <button type="submit" className="cta-btn text-decoration-none">
+              <div className="my-4 pt-2 mx-auto d-flex justify-content-center">
+                <button type="submit" className="cta-btn text-decoration-none w-100 py-3">
                   Send Message
                 </button>
               </div>
             </form>
           </div>
         </div>
-        <div className="col-12 col-md-6 p-3 px-md-5">
+        {/* <div className="col-12 col-md-6 p-3 px-md-5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.03133624569293!2d77.26871001692123!3d28.563222355149303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce30199d52a8d%3A0xfd7bef443c1ca0c1!2sMOYDOM%20Bed%20And%20Breakfast!5e0!3m2!1sen!2sin!4v1764289799287!5m2!1sen!2sin"
             style={{
@@ -142,7 +142,7 @@ const Page = () => {
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>

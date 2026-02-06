@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="col-lg-8">
           <div className="mb-4 mb-lg-0">
             <h5 className="font-playfair text-center">
-              Dreaming of an unforgettable event? Were just a message away
+              Dreaming Of An Unforgettable Celebration?
             </h5>
           </div>
         </div>
@@ -39,7 +39,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="d-flex justify-content-center align-items-center flex-column mb-4 mb-lg-0 col-lg-4">
-            <p className="mb-2 text-uppercase font-playfair fw-medium">
+            {/* <p className="mb-2 text-uppercase font-playfair fw-medium">
               Conatct Us
             </p>
             <a
@@ -48,7 +48,7 @@ const Footer = () => {
               href="tel: "
             >
               +91 98230 45678
-            </a>
+            </a> */}
           </div>
           <div className="d-flex justify-content-center align-items-center flex-column mb-4 mb-lg-0 col-lg-4">
             <p className="mb-2 text-uppercase font-playfair fw-medium">
